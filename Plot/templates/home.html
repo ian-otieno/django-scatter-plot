@@ -4,4 +4,12 @@
 
 {% block content %}
 <h1>Welcome to plotly!</h1>
+<p>When you visit the URL for the scatter_view, you'll see a scatter plot with the following statistics displayed in the title:
+
+    Mean: the mean of the x-values and y-values, rounded to two decimal places
+    Mode: the mode of the x-values and y-values
+    Median: the median of the x-values and y-values
+    Standard Deviation: the standard deviation of the x-values and y-values, rounded to two decimal places
+    Coefficient of Correlation: the coefficient of correlation between the x-values and y-values, rounded to two decimal places
+    The plot and statistics are generated using the data x=[1, 2, 3] and y=[4, 2, 5] in this example. You can modify the code to use your own data.</p>
 {% endblock %}

@@ -1,5 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h2>Statistics</h2>
+
+<table class="table table-striped">
+  <tr>
+    <th></th>
+    <th>X</th>
+    <th>Y</th>
+  </tr>
+  <tr>
+    <td>Mean</td>
+    <td>{{ stats.mean_x|floatformat:2 }}</td>
+    <td>{{ stats.mean_y|floatformat:2 }}</td>
+  </tr>
+  <tr>
+    <td>Mode</td>
+    <td>{{ stats.mode_x }}</td>
+    <td>{{ stats.mode_y }}</td>
+  </tr>
+  <tr>
+    <td>Median</td>
+    <td>{{ stats.median_x }}</td>
+    <td>{{ stats.median_y }}</td>
+  </tr>
+  <tr>
+    <td>Standard Deviation</td>
+    <td>{{ stats.std_x|floatformat:2 }}</td>
+    <td>{{ stats.std_y|floatformat:2 }}</td>
+  </tr>
+  <tr>
+    <td>Coefficient of Correlation</td>
+    <td colspan="2">{{ stats.corr_coef|floatformat:2 }}</td>
+  </tr>
+</table>
+
 {{ plot_div|safe }}
 {% endblock %}
